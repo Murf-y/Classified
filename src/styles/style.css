@@ -1,13 +1,15 @@
 :root{
+    /* TODO: These need to be renamed to the accurate usage*/
     --color-primary: #161A1D;
     --color-secondary: #0B090A;
     --color-tertiary: #660708;
+    --color-tertiary-rgb: 102,7,8;
     --text-primary: #A4161A;
     --text-secondary: #BA181B;
     --text-tertiary:#B1A7A6;
     --text-quaternary: #D3D3D3;
 
-    --navbar-width:5rem;
+    --navbar-width: 2rem;
 }
 
 body{
@@ -17,10 +19,14 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.hidden{
+    display: none;
+}
+
 .navbar{
     background-color: var(--color-secondary);
     height: 100%;
-    width: 5rem;
+    width: var(--navbar-width);
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +35,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
+    box-shadow: 0.01rem 0 1rem 0.1rem rgba(var(--color-tertiary-rgb),0.3);
     padding-top: 2rem;
     transition: 0.5s;
 }
@@ -39,18 +45,27 @@ body{
 
 
 .navbar-logo{
-    width: 3rem;
-    height:3rem;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-size: cover;
-    background-image: url("../../assets/images/logo.jpg");
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    filter: invert(2%) sepia(0%) saturate(7296%) hue-rotate(395deg) brightness(70%) contrast(100%); 
+    background-image: url("../../assets/images/logo.svg");
+    border-radius:1rem;
+    transition: all 0.5s;
 
 }
 
 .navbar-item{
-    border-bottom: 2px solid var(--color-primary);
-    font-size: 1rem;
+    border: 2px solid var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
     font-weight: bold;
+    max-height: 2.5rem;
     width: 100%;
     flex-grow: 1;
     background-color: var(--color-tertiary);
@@ -59,18 +74,67 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition:0.5s;
+    transition:0.4s;
     cursor: pointer;
 }
-.navbar-item:hover{
+
+.closed:hover{
     background-color: var(--text-secondary);
     border-radius: 0 2rem 2rem 0;
-    padding-left: 5rem;
+    padding-left: 4rem;
+
+}
+.opened{
+    background-color: var(--text-secondary);
+    border-radius: 0 2rem 2rem 0;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    justify-content: flex-start;
+    box-shadow: 0 0.1rem 0.2rem var(--color-tertiary);
+    transition: 0.4s;
+    
 }
 
+
+.opened:hover{
+    background-color: var(--text-primary);
+    box-shadow: 0 0.05rem 0.1rem var(--color-tertiary);
+    transform: translateY(-0.2rem);
+}
+
+.navbar-item-icon .navbar-item-text{
+    transition: all 0.5s;
+}
+
+.navbar-controller{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2rem;
+    margin-left: calc(var(--navbar-width)  +  calc(var(--navbar-width) - 3rem)/2);
+    background-color: var(--color-secondary);
+    border-radius: 0 1rem 1rem 0;
+    transition: all 0.5s;
+}
+
+.navbar-controller-icon{
+    cursor: pointer;
+    filter: invert(6%) sepia(52%) saturate(7296%) hue-rotate(352deg) brightness(103%) contrast(101%); 
+    transition: 0.4s;
+}
+
+.right-icon:hover{
+    transform: translateX(0.3rem) scaleX(1.2);
+}
+
+.left-icon:hover{
+    transform: translateX(-0.3rem) scaleX(1.2);
+}
 
 
 .main {
-    margin-left: 75px;
+    margin-left: var(--navbar-width);;
     z-index: 0;
   }
