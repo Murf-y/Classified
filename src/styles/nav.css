@@ -1,5 +1,5 @@
 .navbar{
-    background-color: var(--color-secondary);
+    background-color: var(--color-darkblue-2);
     height: 100vh;
     width: var(--navbar-width);
     position: fixed;
@@ -10,8 +10,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: 0.01rem 0 1rem 0.1rem rgba(var(--color-tertiary-rgb),0.3);
-    padding-top: 2rem;
+    box-shadow: 0.05rem 0 1rem 0.1rem rgba(var(--color-darkblue-2-rgb),0.3);
+    padding-top: 1rem;
+    border-right: 0.01rem solid rgba(var(--color-blue-1-rgb),0.3);
     transition: 0.5s;
 }
 .spacer{
@@ -21,29 +22,29 @@
 
 .navbar-logo{
     width: 80%;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: invert(2%) sepia(0%) saturate(7296%) hue-rotate(395deg) brightness(70%) contrast(100%); 
+    filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(189deg) brightness(70%) contrast(103%);
     background-image: url("../../assets/images/logo.svg");
-    border-radius:1rem;
     transition: all 0.5s;
 
 }
 
 .navbar-item{
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-darkblue-1);
     margin-bottom: 0.5rem;
+    margin-right: 0.4rem;
     font-size: 0.7rem;
     font-weight: bold;
     max-height: 2.5rem;
     width: 100%;
     flex-grow: 1;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-blue-1);
     text-transform: uppercase;
     text-decoration: none;
     display: flex;
@@ -54,26 +55,29 @@
 }
 
 .closed:hover{
-    background-color: var(--text-secondary);
+    background-color: var(--color-lightblue-1);
     border-radius: 0 2rem 2rem 0;
     padding-left: 4rem;
 
 }
+.closed:hover > .navbar-item-icon{
+    padding-right: 0.5rem;
+}
 .opened{
-    background-color: var(--text-secondary);
+    background-color: var(--color-blue-2);
     border-radius: 0 2rem 2rem 0;
     padding-left: 4rem;
     padding-right: 1rem;
     justify-content: flex-start;
-    box-shadow: 0 0.1rem 0.2rem var(--color-tertiary);
+    box-shadow: 0 0.1rem 0.2rem var(--color-blue-1);
     transition: 0.4s;
     
 }
 
 
 .opened:hover{
-    background-color: var(--text-primary);
-    box-shadow: 0 0.05rem 0.1rem var(--color-tertiary);
+    background-color: var(--color-lightblue-1);
+    box-shadow: 0 0.05rem 0.1rem var(--color-lightblue-1);
     transform: translateY(-0.2rem);
 }
 
@@ -89,14 +93,15 @@
     width: 2.2rem;
     height: 2rem;
     margin-left: calc(var(--navbar-width)  +  calc(var(--navbar-width) - 3rem)/2);
-    background-color: var(--color-secondary);
+    background-color: var(--color-darkblue-2);
     border-radius: 0 1rem 1rem 0;
+    border-right: 0.1rem solid rgba(var(--color-blue-1-rgb),0.5);
     transition: all 0.5s;
 }
 
 .navbar-controller-icon{
     cursor: pointer;
-    filter: invert(6%) sepia(52%) saturate(7296%) hue-rotate(352deg) brightness(103%) contrast(101%); 
+    filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(189deg) brightness(87%) contrast(103%);
     transition: 0.4s;
 }
 

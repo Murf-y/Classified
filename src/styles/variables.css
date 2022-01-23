@@ -1,0 +1,21 @@
+:root{
+    --color-darkblue-1:#010a12;
+    --color-darkblue-1-rgb: 1,10,18;
+    --color-darkblue-1-2:#020e18;
+    --color-darkblue-2:#041324;
+    --color-darkblue-2-rgb: 4,19,36;
+    --color-blue-1:#1060c2;
+    --color-blue-1-rgb: 16,96,194;
+    --color-blue-2:#1A74E2;
+    --color-blue-2-rgb: 26,116,226;
+    --color-lightblue-1:#3FA0EF;
+    --color-lightblue-1-rgb: 63,160,239;
+    --color-lightblue-2:#6BD0FF;
+    --color-lightblue-2-rgb: 107,208,255;
+    --color-greyblue-1:#AAC2CC;
+    --color-greyblue-1-rgb: 170,194,204;
+    --color-greyblue-2:#B1B1B1;
+    --color-greyblue-2-rgb: 177,177,177;
+
+    --navbar-width: 2rem;
+}
