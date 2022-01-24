@@ -190,7 +190,7 @@ body{
     }
     .box{
         width: 15rem;
-        
+        box-shadow: -1.5rem -0.9rem 0.5rem 0rem rgba(var(--color-blue-2-rgb),0.2);
 
     }
 }
@@ -224,6 +224,10 @@ body{
     }
     .box{
         width: 8rem;
-        font-size:1rem;
+        font-size:0.9rem;
+        box-shadow: -0.5rem -1rem 0.5rem 0rem rgba(var(--color-blue-2-rgb),0.2);
+    }
+    .box:hover{
+        box-shadow: -0.5rem 1rem 0.5rem 0rem rgba(var(--color-lightblue-2-rgb),0.2);
     }
 }
