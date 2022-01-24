@@ -21,18 +21,22 @@
 
 
 .navbar-logo{
-    width: 80%;
+    width: 70%;
     height: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(189deg) brightness(70%) contrast(103%);
     background-image: url("../../assets/images/logo.svg");
     transition: all 0.5s;
 
+}
+.navbar-logo:hover{
+    transform: scale(1.1);
+    filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(190deg) brightness(85%) contrast(103%);
 }
 
 .navbar-item{
