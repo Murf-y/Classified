@@ -1,17 +1,27 @@
-import axios from "axios";
 
-const options = {
-  method: 'GET',
-  url: 'https://numbersapi.p.rapidapi.com/1492/year',
-  params: {json: 'true', fragment: 'true'},
-  headers: {
-    'x-rapidapi-host': 'numbersapi.p.rapidapi.com',
-    'x-rapidapi-key': '2046301adamsha5cea5d0410713cp1d79a7jsn289e43c73ab9'
+
+async function getNumberFact(type, min , max){
+  var data = null;
+
+  const response = await fetch(`https://numbersapi.p.rapidapi.com/random/${type}/?min=${min}&max=${max}&fragment=true&json=true`, {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+      "x-rapidapi-key": "7f108ac871msh8f9a95e5035958cp14e2a8jsn01efd06cb350"
+    }
+    }).catch(err => {
+      data = "Sorry unable to fetch data";
+    });
+  if (data === null){
+    var data = await response.json();
+    // capitalize the first letter of the fact
+    data.text = data.text.charAt(0).toUpperCase() + data.text.slice(1);
+    var result = data.number + ": " + data.text +".";
+    return result
   }
-};
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+  return data;
+   
+}
+
+export default getNumberFact;

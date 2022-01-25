@@ -10,4 +10,6 @@ function addClassFromElement(elementSelector, className){
     document.querySelector(elementSelector).classList.add(className);
 }
 
+
+
 export { setCssVariable, removeClassFromElement, addClassFromElement };
