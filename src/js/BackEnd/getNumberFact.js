@@ -7,7 +7,7 @@ async function getNumberFact(type, min , max){
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "numbersapi.p.rapidapi.com",
-      "x-rapidapi-key": "7f108ac871msh8f9a95e5035958cp14e2a8jsn01efd06cb350"
+      "x-rapidapi-key": 
     }
     }).catch(err => {
       data = "Sorry unable to fetch data";
