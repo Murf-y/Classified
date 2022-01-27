@@ -5,22 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href= "styles/index.css" rel=stylesheet>
-    <link href= "styles/nav.css" rel=stylesheet>
-    <link href= "styles/variables.css" rel=stylesheet>
+    <link href= "../styles/index.css" rel=stylesheet>
+    <link href= "../styles/nav.css" rel=stylesheet>
+    <link href= "../styles/variables.css" rel=stylesheet>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@459&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
-
-
-    <script src="js/navbar.js"                  defer type="module"></script>
-    <script src= "js/BackEnd/getNumberFact.js"  defer type="module"></script>
-    <script src="js/Tabs/dictionaryTab.js"      defer type="module"></script>
-    <script src="js/Tabs/calculatorTab.js"      defer type="module"></script>
-    <script src="js/Tabs/translateTab.js"       defer type="module"></script>
-    <script src="js/Tabs/notesTab.js"           defer type="module"></script>
-    <script src="js/Tabs/searchBooksTab.js"     defer type="module"></script>
-    <script src="js/Tabs/numberTab.js"          defer type="module"></script>
 
     <!--TODO: Change to the actual name-->
     <title>EduSurf</title>
@@ -32,32 +22,32 @@
         <div class="navbar-logo" href="#"></div>
         <div class="spacer"></div>
         <div class="navbar-controller">
-                <img class="navbar-controller-icon right-icon" src="../assets/icons/arrow-right.svg"></img>
+                <img class="navbar-controller-icon right-icon" src="../../assets/icons/arrow-right.svg"></img>
         
         </div>
         <div class="spacer"></div>
         <div class="navbar-item closed" id="DictionaryTab">
-            <img class="navbar-item-icon" src="../assets/icons/dictonary.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/dictonary.svg"></img>
             <h2 class="navbar-item-text hidden">Dictonary</h2>
         </div>
         <div class="navbar-item closed" id="CalculatorTab">
-            <img class="navbar-item-icon" src="../assets/icons/calculator.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/calculator.svg"></img>
             <h2 class="navbar-item-text hidden">Calculator</h2>
         </div>
         <div class="navbar-item closed" id="SearchBooksTab">
-            <img class="navbar-item-icon" src="../assets/icons/search-books.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/search-books.svg"></img>
             <h2 class="navbar-item-text hidden">Books</h2>
         </div>
         <div class="navbar-item closed" id="TranslateTab">
-            <img class="navbar-item-icon" src="../assets/icons/translate.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/translate.svg"></img>
             <h2 class="navbar-item-text hidden">Translate</h2>
         </div>
         <div class="navbar-item closed" id="NotesTab">
-            <img class="navbar-item-icon" src="../assets/icons/notes.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/notes.svg"></img>
             <h2 class="navbar-item-text hidden">Notes</h2>
         </div>
         <div class="navbar-item closed" id="NumbersTab">
-            <img class="navbar-item-icon" src="../assets/icons/numbers.svg"></img>
+            <img class="navbar-item-icon" src="../../assets/icons/numbers.svg"></img>
             <h2 class="navbar-item-text hidden">Numbers</h2>
         </div>
         <div class="spacer"></div>
@@ -78,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <img class="title-image" src="../assets/images/School.svg">
+            <img class="title-image" src="../../assets/images/School.svg">
             </img>
             
         </section>
@@ -97,5 +87,10 @@
         </section>
         
     </div>
+
+
+
+    <script src="../js/navbar.js"                  defer type="module"></script>
+    <script src="../BackEnd/getNumberFact.js"      defer type="module"></script>
 </body>
 </html>

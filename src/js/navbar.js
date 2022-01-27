@@ -1,13 +1,7 @@
-import CalculatorTab from "./Tabs/calculatorTab.js";
-import DictionaryTab from "./Tabs/dictionaryTab.js";
-import NotesTab from "./Tabs/notesTab.js";
-import NumbersTab from "./Tabs/numberTab.js";
-import SearchBookTab from "./Tabs/searchBooksTab.js";
-import TranslateTab from "./Tabs/translateTab.js";
 import { setCssVariable , removeClassFromElement, addClassFromElement} from "./utils.js";
 
 
-const navbarMaxWidth = "7rem";
+const NAVBARMAXWIDTH = "7rem";
 
 var is_navbar_closed = true;
 function OpenNavBar(){
@@ -16,14 +10,14 @@ function OpenNavBar(){
     is_navbar_closed = false;
 
     // increase the navbar width
-    setCssVariable("--navbar-width", navbarMaxWidth);
+    setCssVariable("--navbar-width", NAVBARMAXWIDTH);
 
     // change the icon class for styling to take place
     removeClassFromElement(".navbar-controller-icon","right-icon");
     addClassFromElement(".navbar-controller-icon","left-icon");
 
     // change the icon
-    document.querySelector(".navbar-controller-icon").src = "../assets/icons/arrow-left.svg";
+    document.querySelector(".navbar-controller-icon").src = "../../assets/icons/arrow-left.svg";
 
     //change the logo size
     document.querySelector(".navbar-logo").style.width = "50%";
@@ -46,7 +40,7 @@ function CloseNavBar(){
     addClassFromElement(".navbar-controller-icon","right-icon");
 
     // change the icon
-    document.querySelector(".navbar-controller-icon").src = "../assets/icons/arrow-right.svg";
+    document.querySelector(".navbar-controller-icon").src = "../../assets/icons/arrow-right.svg";
 
     //change the logo size
     document.querySelector(".navbar-logo").style.width = "80%";
@@ -128,7 +122,6 @@ document.getElementById("DictionaryTab").addEventListener("click", function(even
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    DictionaryTab();
     event.preventDefault();
 });
 
@@ -136,7 +129,6 @@ document.getElementById("CalculatorTab").addEventListener("click", function(even
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    CalculatorTab();
     event.preventDefault();
 });
 
@@ -144,8 +136,6 @@ document.getElementById("SearchBooksTab").addEventListener("click", function(eve
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    SearchBookTab();
-    
     event.preventDefault();
 });
 
@@ -153,8 +143,6 @@ document.getElementById("NotesTab").addEventListener("click", function(event){
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    NotesTab();
-    
     event.preventDefault();
 });
 
@@ -162,8 +150,6 @@ document.getElementById("TranslateTab").addEventListener("click", function(event
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    TranslateTab();
-    
     event.preventDefault();
     
 });
@@ -172,7 +158,6 @@ document.getElementById("NumbersTab").addEventListener("click", function(event){
     if(!is_navbar_closed){
         CloseNavBar();
     }
-    NumbersTab();
     event.preventDefault();
     
 });
