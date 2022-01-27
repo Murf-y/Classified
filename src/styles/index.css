@@ -12,8 +12,6 @@ body{
 
 
 .main {
-    /*  TODO: decide whether to make the navbar goes above
-        TODO  the main page or below it. */
     margin-left: var(--navbar-width);
     width: calc(100% - var(--navbar-width));
     z-index: 0;
@@ -47,6 +45,10 @@ body{
     width:35rem;
     height:35rem;
     filter: drop-shadow(0px 0px 1rem rgba(var(--color-lightblue-1-rgb),0.5));
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .title{
@@ -59,8 +61,10 @@ body{
     background-size: 100%;
     background-repeat: repeat;
     transition: all 0.5s;
+
     -webkit-text-stroke-width: 0.005rem;
     -webkit-text-stroke-color: rgba(var(--color-blue-1-rgb),0.5);
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -68,6 +72,11 @@ body{
     -moz-text-fill-color: transparent;
     -o-background-clip: text;
     -o-text-fill-color: transparent;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 
 }
 .title:hover{

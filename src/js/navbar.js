@@ -19,9 +19,6 @@ function OpenNavBar(){
     // change the icon
     document.querySelector(".navbar-controller-icon").src = "../../assets/icons/arrow-left.svg";
 
-    //change the logo size
-    document.querySelector(".navbar-logo").style.width = "50%";
-
     // change the navbar items to their original state
     ChangeNavBarItems();
 
@@ -98,7 +95,7 @@ function ChangeNavBarItems(){
                 text.classList.remove("hidden")
             });
         }
-    }, 200);
+    }, 100);
 
 
     
@@ -116,48 +113,9 @@ document.querySelector(".navbar-controller-icon").addEventListener("click", func
     }
 });
 
-// Add event listener for each navbarTab
-
-document.getElementById("DictionaryTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-});
-
-document.getElementById("CalculatorTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-});
-
-document.getElementById("SearchBooksTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-});
-
-document.getElementById("NotesTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-});
-
-document.getElementById("TranslateTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-    
-});
-
-document.getElementById("NumbersTab").addEventListener("click", function(event){
-    if(!is_navbar_closed){
-        CloseNavBar();
-    }
-    event.preventDefault();
-    
-});
+var navItems =  document.getElementsByClassName("navbar-item");
+for(var i = 0; i < navItems.length; i++){
+    navItems[i].addEventListener("click", function(e){
+       CloseNavBar();
+    });
+}    

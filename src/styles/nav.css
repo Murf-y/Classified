@@ -1,3 +1,7 @@
+a{
+    color: black;
+
+}
 .navbar{
     background-color: var(--color-darkblue-2);
     height: 100vh;
@@ -5,7 +9,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -22,7 +25,7 @@
 
 .navbar-logo{
     width: 70%;
-    height: 5rem;
+    height: 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -55,7 +58,36 @@
     justify-content: center;
     align-items: center;
     transition:0.4s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     cursor: pointer;
+}
+
+.navbar-item-home{
+    margin-top: 1rem;
+    width: 100%;
+    flex-grow: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.4s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+}
+.navbar-item-home-icon:hover{
+    transform: scale(1.1) translateY(-0.2rem);
+    filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(190deg) brightness(90%) contrast(70%);
+}
+.navbar-item-home-icon{
+    transition: all 0.4s;
+    filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(190deg) brightness(85%) contrast(103%);
 }
 
 .closed:hover{
@@ -64,6 +96,8 @@
     padding-left: 4rem;
 
 }
+
+
 .closed:hover > .navbar-item-icon{
     padding-right: 0.5rem;
 }
@@ -104,6 +138,10 @@
 }
 
 .navbar-controller-icon{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     cursor: pointer;
     filter: invert(31%) sepia(95%) saturate(1047%) hue-rotate(189deg) brightness(87%) contrast(103%);
     transition: 0.4s;

@@ -1,0 +1,28 @@
+body{
+    background-color: var(--color-darkblue-1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.hidden{
+    display: none;
+}
+
+.main {
+    margin-left: var(--navbar-width);
+    width: calc(100% - var(--navbar-width));
+    z-index: 0;
+    transition: all 0.5s;
+    height: 100%;
+    --stripe: var(--color-darkblue-1-2);
+    --bg: var(--color-darkblue-1);
+
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+      linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
+}
