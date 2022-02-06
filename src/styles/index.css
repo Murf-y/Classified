@@ -117,7 +117,7 @@ body{
 .box:hover{
     transform: scale(1.1) translateY(-0.1rem);
     background-color: rgba(var(--color-darkblue-1-rgb),0.7);
-    box-shadow: -1rem 1rem 0.5rem 0rem rgba(var(--color-lightblue-1-rgb),0.4);
+    box-shadow: -1rem 1rem 0.1rem 0rem rgba(var(--color-blue-2-rgb),0.4);
 }
 #corner-tl {
     top: -5px;
