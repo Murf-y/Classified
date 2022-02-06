@@ -1,4 +1,4 @@
-import getDictionaryWord from "../BackEnd/getDictionaryWord.js";
+import getDictionaryWord from "BackEnd/getDictionaryWord.js";
 var searchButton = document.querySelector('.search-btn');
 var searchInput = document.querySelector('.search-input');
 var middleSection = document.querySelector('.middle');
