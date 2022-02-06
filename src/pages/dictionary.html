@@ -75,18 +75,29 @@
             </img>
         </section>
         <section class="middle">
-            <form class="search-container">
-                <input class="search-input" type="text" placeholder="Search for a word" required >
-            </form>
-            <div class="results-container">
+            <div class="input-container">
+                <form class="search-container">
 
+                    <input title="Search for a word" class="search-input" type="text" placeholder="Search for a word">
+                </form>
+                <a class="search-btn">
+                    <span class="search-btn-icon"><svg width="15" height="15" viewBox="2 2 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M8.5 14a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM15 8.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
+                </svg></span>
+                    <span class="search-btn-text">Search</span>
+                </a>
             </div>
         </section>
+        <div class="space-box"></div>
+        <div class="space-box"></div>
+        
+        <div class="space-box"></div>
 
         
     </div>
 
     <script src="../js/navbar.js" type="module"></script>
+    <script src="../BackEnd/getDictionaryWord.js" type="module"></script>
     <script src="../js/dictionary.js" type ="module"></script>
 
 </body>
