@@ -17,7 +17,7 @@ function OpenNavBar(){
     addClassFromElement(".navbar-controller-icon","left-icon");
 
     // change the icon
-    document.querySelector(".navbar-controller-icon").src = "../assets/icons/arrow-left.svg";
+    document.querySelector(".navbar-controller-icon").src = "../../src/assets/icons/arrow-left.svg";
 
     // change the navbar items to their original state
     ChangeNavBarItems();
@@ -37,7 +37,7 @@ function CloseNavBar(){
     addClassFromElement(".navbar-controller-icon","right-icon");
 
     // change the icon
-    document.querySelector(".navbar-controller-icon").src = "../assets/icons/arrow-right.svg";
+    document.querySelector(".navbar-controller-icon").src = "../../src/assets/icons/arrow-right.svg";
 
     //change the logo size
     document.querySelector(".navbar-logo").style.width = "80%";
