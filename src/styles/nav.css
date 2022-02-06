@@ -17,6 +17,7 @@ a{
     padding-top: 1rem;
     border-right: 0.01rem solid rgba(var(--color-blue-1-rgb),0.3);
     transition: 0.5s;
+    z-index: 10;
 }
 .spacer{
     flex-grow: 2;
@@ -101,6 +102,10 @@ a{
 .closed:hover > .navbar-item-icon{
     padding-right: 0.5rem;
 }
+.closed{
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
+}
 .opened{
     background-color: var(--color-blue-2);
     border-radius: 0 2rem 2rem 0;
@@ -110,6 +115,8 @@ a{
     box-shadow: 0 0.1rem 0.2rem var(--color-blue-1);
     transition: 0.4s;
     
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
 }
 
 
@@ -155,3 +162,38 @@ a{
     transform: translateX(-0.3rem) scaleX(1.2);
 }
 
+
+
+@keyframes fadeIn {
+    from {
+
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

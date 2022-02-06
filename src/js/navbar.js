@@ -61,7 +61,7 @@ function ChangeNavBarItems(){
                 // change classes for styling
                 item.classList.remove("closed");
                 item.classList.add("opened");
-            }, 100);
+            }, 0);
             
         }
         else{
@@ -95,7 +95,7 @@ function ChangeNavBarItems(){
                 text.classList.remove("hidden")
             });
         }
-    }, 0);
+    }, 100);
 
 
     
