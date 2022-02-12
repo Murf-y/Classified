@@ -40,8 +40,8 @@ class Button {
 
                         current_query = current_query.slice(0, -1);
                         input_element.innerHTML = current_query;
-                        break;
                     }
+                    break;
                 default:
                     current_query += this.value;
                     input_element.innerHTML = current_query;
